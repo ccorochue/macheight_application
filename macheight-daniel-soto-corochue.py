@@ -9,7 +9,7 @@ response = urlopen(url)                                                         
 
 # Save all players in a list of dicts sorted by height desc
 players = sorted(json.loads(response.read()) ['values'], key=lambda i:i['h_in'], reverse=True)
-max_number = int(players[0]['h_in']) + int(players[2]['h_in'])                     # Assign to max_number the sum of the two tallest players
+max_number = int(players[0]['h_in']) + int(players[1]['h_in'])                     # Assign to max_number the sum of the two tallest players
 min_number = int(players[-1]['h_in']) + int(players[-2]['h_in'])                   # Assign to min_number the sum of the two smaller players
 
 # Ask to user for a number
